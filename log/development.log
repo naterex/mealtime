@@ -259,3 +259,9 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-16 13:14:27 
 
 
 Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-16 13:14:27 +0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-16 14:44:38 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/under_construction.html.erb (2.0ms)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.0ms)
