@@ -3,6 +3,7 @@ mealtime
 
 App for ordering food online
 
+```
 
                 ___
                   `. \
@@ -31,3 +32,4 @@ App for ordering food online
            |  \  \| . || \ || |
            |     ||   ||   ||_/
            |_|_|_||_|_||_\_|<_>
+```
