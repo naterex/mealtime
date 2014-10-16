@@ -1,3 +1,72 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Bootstrap CSS */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+
+body {
+  background-image: url("/assets/Neutral-Table-Setting.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  opacity: 0.4;
+}
+
+.navbar-inverse .navbar-brand {
+  color: red;
+  opacity: 1;
+}
+
+
+.jumbotron {
+  background: rgba(255, 255, 255, 0.8);
+}
+.navbar-brand,
+.jumbotron h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+.time-delivery-guarantee {
+  background-color: #428bca;
+  border-color: #357ebd;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.time-delivery-guarantee p {
+  padding: 10px 0 0 0;
+  text-align: center, center;
+  font-size: 1em;
+  color: white;
+}
+
+.intro-paragraph {
+  text-align: center;
+}
+
+.homepage-login {
+  margin: 50px 0 0 0;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+/* Doesnt work yet
+.homepage-login button {
+  margin: auto;
+}
+*/
+.img-homepage-footer {
+  width: 275px;
+  height: 181px;
+}
