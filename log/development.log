@@ -3688,3 +3688,1098 @@ Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 13:51:26 +080
 
 
 Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 13:51:26 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:04:19 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.3ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (9.0ms)
+Completed 500  in 31ms
+
+NoMethodError - undefined method `photo_path' for #<Array:0x007fa8fa125728>:
+  app/views/welcome/index.html.erb:84:in `block in _app_views_welcome_index_html_erb___1186397012932524286_70181885590240'
+  app/views/welcome/index.html.erb:82:in `_app_views_welcome_index_html_erb___1186397012932524286_70181885590240'
+  actionview (4.1.6) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.1.6) lib/active_support/notifications.rb:161:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:339:in `instrument'
+  actionview (4.1.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:55:in `block (2 levels) in render_template'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:54:in `block in render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:62:in `render_with_layout'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  app/controllers/welcome_controller.rb:20:in `index'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/58a43da57492022d/variables" for 127.0.0.1 at 2014-10-17 14:04:20 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.1ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 43.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/burger.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/cobb_salad.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/beef_pepper_steak.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/lamp.png" for 127.0.0.1 at 2014-10-17 14:04:45 +0800
+
+
+Started GET "/assets/Neutral-Table-Setting.jpg" for 127.0.0.1 at 2014-10-17 14:04:46 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:02 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.5ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 42.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/crab_yellow_curry.png" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/shaking_frog.png" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/assets/sausage.png" for 127.0.0.1 at 2014-10-17 14:05:03 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.4ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 49.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/beef_pepper_steak.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/butchered_dog.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/assets/liver.png" for 127.0.0.1 at 2014-10-17 14:05:05 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.5ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 63ms (Views: 40.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/chicken_with_rice.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/peking_duck.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/assets/liver.png" for 127.0.0.1 at 2014-10-17 14:05:06 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 72ms (Views: 55.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/shaking_frog.png" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/butchered_dog.png" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/chicken_with_rice.png" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/assets/lamp.png" for 127.0.0.1 at 2014-10-17 14:05:07 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.3ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 60ms (Views: 43.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/beef_pepper_steak.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/burger.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/lamp.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/chicken_with_rice.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 14:05:08 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 75ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/chicken_with_rice.png" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/crab_yellow_curry.png" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/shaking_frog.png" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/assets/lamp.png" for 127.0.0.1 at 2014-10-17 14:05:09 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.1ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.3ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.4ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 43.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/burger.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/pad_thai.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/crab_yellow_curry.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/beef_pepper_steak.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/assets/liver.png" for 127.0.0.1 at 2014-10-17 14:05:10 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.2ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.3ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 69ms (Views: 51.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/juice.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/peking_duck.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/pad_thai.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/assets/liver.png" for 127.0.0.1 at 2014-10-17 14:05:11 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 15:42:58 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.4ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.3ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.1ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 403ms (Views: 371.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/food_item.css?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/food_item.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/liver.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/pad_thai.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/burger.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/lobster-paella.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/monkey_brain.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/lamp.png" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/assets/Neutral-Table-Setting.jpg" for 127.0.0.1 at 2014-10-17 15:42:59 +0800
+
+
+Started GET "/?admin=true" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+Processing by WelcomeController#index as HTML
+  Parameters: {"admin"=>"true"}
+  [1m[35mFoodItem Load (0.1ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Western'
+  [1m[36mFoodItem Load (0.2ms)[0m  [1mSELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Asian'[0m
+  [1m[35mFoodItem Load (0.3ms)[0m  SELECT "food_items".* FROM "food_items"  WHERE "food_items"."cuisine" = 'Adventurous'
+  [1m[36mFoodItem Load (0.6ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_items".* FROM "food_items"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_items".* FROM "food_items"[0m
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 103ms (Views: 68.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/food_item.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/beef_pepper_steak.png" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/food_item.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/dust.png" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/steak.png" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/cobb_salad.png" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/crispy_kale.jpg" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/assets/chicken_with_rice.png" for 127.0.0.1 at 2014-10-17 15:51:19 +0800
+
+
+Started GET "/food_item/show" for 127.0.0.1 at 2014-10-17 15:51:27 +0800
+
+ActionController::RoutingError (No route matches [GET] "/food_item/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.8ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.9ms)
+
+
+Started GET "/food_item/show/88" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+Processing by FoodItemController#show as HTML
+  Parameters: {"id"=>"88"}
+  Rendered food_item/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/food_item.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/food_item.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-17 15:51:32 +0800
+
+
+Started GET "/food_item/show/" for 127.0.0.1 at 2014-10-17 15:51:36 +0800
+
+ActionController::RoutingError (No route matches [GET] "/food_item/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/food_item/show/j,hgkj" for 127.0.0.1 at 2014-10-17 15:52:08 +0800
+
+SyntaxError - syntax error, unexpected ',', expecting ';' or '\n'
+  def show, layout: false
+           ^
+/Users/nate/Google Drive/WDI/mealtime/app/controllers/food_item_controller.rb:4: syntax error, unexpected keyword_end, expecting end-of-input:
+  app/controllers/food_item_controller.rb:2:in `'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/e5ae981f59114ca9/variables" for 127.0.0.1 at 2014-10-17 15:52:08 +0800
+
+
+Started GET "/food_item/show/jhgkj" for 127.0.0.1 at 2014-10-17 15:52:12 +0800
+
+SyntaxError - syntax error, unexpected ',', expecting ';' or '\n'
+  def show, layout: false
+           ^
+/Users/nate/Google Drive/WDI/mealtime/app/controllers/food_item_controller.rb:4: syntax error, unexpected keyword_end, expecting end-of-input:
+  app/controllers/food_item_controller.rb:2:in `'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:180:in `const_missing'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.6) lib/active_support/inflector/methods.rb:236:in `constantize'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:552:in `get'
+  activesupport (4.1.6) lib/active_support/dependencies.rb:583:in `constantize'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:78:in `controller_reference'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:68:in `controller'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:46:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  rack-contrib (1.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.3.4) lib/meta_request/middlewares/headers.rb:16:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/a9f930dd9aadcc20/variables" for 127.0.0.1 at 2014-10-17 15:52:12 +0800
+
+
+Started GET "/food_item/show/jhgkj" for 127.0.0.1 at 2014-10-17 15:52:35 +0800
+Processing by FoodItemController#show as HTML
+  Parameters: {"id"=>"jhgkj"}
+  Rendered food_item/show.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food_item/show" for 127.0.0.1 at 2014-10-17 15:52:43 +0800
+
+ActionController::RoutingError (No route matches [GET] "/food_item/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+
+
+Started GET "/food_item/show" for 127.0.0.1 at 2014-10-17 15:55:18 +0800
+
+ActionController::RoutingError (No route matches [GET] "/food_item/show"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/nate/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/nate/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.5ms)
+
+
+Started GET "/food_item/show" for 127.0.0.1 at 2014-10-17 15:58:14 +0800
+Processing by FoodItemController#show as HTML
+  Rendered food_item/show.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food_item/show/:id" for 127.0.0.1 at 2014-10-17 15:58:21 +0800
+Processing by FoodItemController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendered food_item/show.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)

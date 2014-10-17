@@ -78,16 +78,14 @@
           <%= @item[3].price %>
         </div>
       </div>
+
+      <!-- Create row of pictures using Ruby loop -->
       <div class="row">
-        <div class="col-md-4">
-          <%= image_tag @western_item.photo_path, class: "img-homepage-footer img-rounded" %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag @asian_item.photo_path, class: "img-homepage-footer img-rounded" %>
-        </div>
-        <div class="col-md-4">
-          <%= image_tag @adventurous_item.photo_path, class: "img-homepage-footer img-rounded" %>
-        </div>
+        <% [@western_item, @asian_item, @adventurous_item].each do |item| %>
+          <div class="col-md-4">
+            <%= image_tag item.photo_path, class: "img-homepage-footer img-rounded" %>
+          </div>
+        <% end %>
       </div>
 
       <footer>
