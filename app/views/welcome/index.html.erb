@@ -30,7 +30,7 @@
       </div>
       <div class="container col-md-offset-1 col-md-2">
         <div class="time-delivery-guarantee">
-          <p>Have your food delivered by: <%= @delivery_time.strftime("%I:%M %p") %> </p>
+          <p>Have your food delivered by: <%= @delivery_time%> </p>
         </div>
       </div>
       <div class="container col-md-offset-1 col-md-5 intro-paragraph">
@@ -62,21 +62,37 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-3">
-          <img src="/assets/goat-pesto.png" class="img-homepage-footer img-rounded">
+          <%= image_tag @item[0].photo_path, class: "img-homepage-footer img-rounded" %>
+          <%= @item[0].price %>
         </div>
         <div class="col-md-3">
-          <img src="/assets/grilled-chicken.png" class="img-homepage-footer img-rounded">
+          <%= image_tag @item[1].photo_path, class: "img-homepage-footer img-rounded" %>
+          <%= @item[1].price %>
        </div>
         <div class="col-md-3">
-          <img src="/assets/healthy-wrap.png" class="img-homepage-footer img-rounded">
+          <%= image_tag @item[2].photo_path, class: "img-homepage-footer img-rounded" %>
+          <%= @item[2].price %>
         </div>
         <div class="col-md-3">
-          <img src="/assets/salmon-salad.png" class="img-homepage-footer img-rounded">
-
+          <%= image_tag @item[3].photo_path, class: "img-homepage-footer img-rounded" %>
+          <%= @item[3].price %>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag @western_item.photo_path, class: "img-homepage-footer img-rounded" %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag @asian_item.photo_path, class: "img-homepage-footer img-rounded" %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag @adventurous_item.photo_path, class: "img-homepage-footer img-rounded" %>
+        </div>
+      </div>
+
       <footer>
       </footer>
+
     </div> <!-- /container -->
 
 
