@@ -59,22 +59,30 @@
       </div>
     </div>
     <div class="container">
-      <!-- Example row of columns -->
+      <!-- Create row of pictures manually -->
       <div class="row">
         <div class="col-md-3">
-          <%= image_tag @item[0].photo_path, class: "img-homepage-footer img-rounded" %>
+          <a href="/food_item/show/<%= @item[0].id %>">
+            <%= image_tag @item[0].photo_path, class: "img-homepage-footer img-rounded" %>
+          </a>
           <%= @item[0].price %>
         </div>
         <div class="col-md-3">
-          <%= image_tag @item[1].photo_path, class: "img-homepage-footer img-rounded" %>
+          <a href="/food_item/show/<%= @item[1].id %>">
+            <%= image_tag @item[1].photo_path, class: "img-homepage-footer img-rounded" %>
+          </a>
           <%= @item[1].price %>
        </div>
         <div class="col-md-3">
-          <%= image_tag @item[2].photo_path, class: "img-homepage-footer img-rounded" %>
+          <a href="/food_item/show/<%= @item[2].id %>">
+            <%= image_tag @item[2].photo_path, class: "img-homepage-footer img-rounded" %>
+          </a>
           <%= @item[2].price %>
         </div>
         <div class="col-md-3">
-          <%= image_tag @item[3].photo_path, class: "img-homepage-footer img-rounded" %>
+          <a href="/food_item/show/<%= @item[3].id %>">
+            <%= image_tag @item[3].photo_path, class: "img-homepage-footer img-rounded" %>
+          </a>
           <%= @item[3].price %>
         </div>
       </div>
@@ -83,7 +91,8 @@
       <div class="row">
         <% [@western_item, @asian_item, @adventurous_item].each do |item| %>
           <div class="col-md-4">
-            <%= image_tag item.photo_path, class: "img-homepage-footer img-rounded" %>
+            <a href="/food_item/show/<%= item.id %>">
+              <%= image_tag item.photo_path, class: "img-homepage-footer img-rounded" %>
           </div>
         <% end %>
       </div>
